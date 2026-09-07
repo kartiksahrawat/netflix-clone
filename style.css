@@ -302,6 +302,141 @@
   user-select: none;
 }
 
+/*------------------ Reasons Section ------------------*/
+.reasons-section {
+  width: 100%;
+  background-color: #000000;
+  padding: 00px 0 10px 0;
+}
 
+.reasons-section h2 {
+  max-width: 1200px;
+  width: 85%;
+  margin: 0 auto 20px auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
 
+.reasons-grid {
+  max-width: 1200px;
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* Individual Gradient Card */
+.reason-card {
+  position: relative;
+  background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+  border-radius: 16px;
+  padding: 24px 16px 85px 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+}
+
+.reason-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.reason-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Bottom Right Glowing Icons */
+.reason-icon {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reason-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: #ff2d55;
+  filter: drop-shadow(0 0 10px rgba(255, 45, 85, 0.5));
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 960px) {
+  .reasons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .reasons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*------------------ FAQ Section ------------------*/
+.faq-section {
+  width: 100%;
+  background-color: #000000;
+  padding: 60px 0 80px 0;
+}
+
+.faq-section h2 {
+  max-width: 1200px;
+  width: 85%;
+  margin: 0 auto 18px auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.faq-list {
+  max-width: 1200px;
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Netflix bars ke beech ka exact gap */
+}
+
+/* Base Bar Style */
+.faq-question {
+  width: 100%;
+  background-color: #2d2d2d; /* Exact Netflix dark-gray */
+  color: #ffffff;
+  border: none;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.45rem;
+  font-weight: 400;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.25s ease;
+}
+
+/* Hover Effect: lighter gray tone */
+.faq-question:hover {
+  background-color: #414141;
+}
+
+/* Plus (+) Icon */
+.faq-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  stroke: #ffffff;
+}
 
