@@ -12,8 +12,8 @@
  header {
   background-image: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.4) 40%,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.5) 50%,
       rgba(0, 0, 0, 0.9) 100%
     ),
     url('./Assets/bg.png');
@@ -70,7 +70,7 @@
   background-color: #c11119;
 }
 
-/* Hero Container */
+/*------------------Hero Container------------------*/
 .hero-content {
   position: relative;
   z-index: 10;
@@ -101,11 +101,7 @@
 
 .email-form {
   display: flex;
-  /* justify-content: center; */ 
-  /* align-items: center; */
   gap: 8px;
-  /* width: 100%; */
-  /*mai justify align and width ko comment bhi kr rha toh koi frk nhi aarha*/
 }
 
 .email-form input {
@@ -142,4 +138,170 @@
 .email-form button:hover {
   background-color: #c11119;
 }
+
+/*------------------Curve Divider------------------*/
+.curve-container {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  background-color: #000;
+  margin-top: -30px;
+  z-index: 20;
+}
+
+.curve-arc {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220%;
+  height: 800px;
+  border-radius: 50% 50% 0 0;
+  padding-top: 3.5px; 
+  background: linear-gradient(
+    90deg,
+    /* rgba(229, 9, 20, 0) 0%,
+    rgba(229, 9, 20, 0.4) 25%,
+    rgba(255, 30, 86, 1) 50%,
+    rgba(229, 9, 20, 0.8) 75%,
+    rgba(229, 9, 20, 0) 100% */
+    rgba(229, 9, 20, 0) 0%,
+    rgba(229, 9, 20, 0.4) 15%,
+    rgba(229, 9, 20, 1) 35%,
+    rgba(255, 20, 100, 1) 50%,
+    rgba(229, 9, 20, 1) 65%,
+    rgba(229, 9, 20, 0.4) 85%,
+    rgba(229, 9, 20, 0) 100%
+  );
+  
+  box-shadow: 0px -2px 14px rgba(230, 20, 90, 0.4);
+}
+
+.curve-arc::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50% 50% 0 0;
+  background: radial-gradient(
+    50% 500px at 50% 0%,
+    #000000 0%,
+    #000000 55%,
+    #000000 90%
+  );
+}
+
+/*------------------ Trending Now Section ------------------*/
+.trending-section {
+  background-color: #000000; /* White background fix */
+  width: 100%;
+  padding: 20px 0 60px 0;
+  margin: 0;
+}
+
+.trending-section h2 {
+  max-width: 1200px;
+  width: 85%;
+  margin: 0 auto 20px auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff; /* White title heading */
+}
+
+.carousel-wrapper {
+  max-width: 1200px;
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Horizontal Track */
+.cards-track {
+  display: flex;
+  gap: 45px;
+  padding: 10px 10px 30px 35px; /* Extra left padding taaki '1' crop na ho */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.cards-track::-webkit-scrollbar {
+  display: none; /* Chrome/Edge scrollbar hide */
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  width: 45px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 4px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background: rgba(20, 20, 20, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+
+
+/* Single Poster Card */
+.card {
+  position: relative;
+  flex: 0 0 180px;
+  height: 252px;
+  border-radius: 12px;
+  cursor: pointer;
+  scroll-snap-align: start;
+  transition: transform 0.25s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Exact Netflix Hollow Shadow Numbers */
+.card-num {
+  position: absolute;
+  bottom: 15px;
+  left: -25px;
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #000000;
+  -webkit-text-stroke: 2px #fcfcfc; /* Clear outer gray-white boundary */
+  text-shadow: 0 0 16px rgba(0, 0, 0, 0.9);
+  pointer-events: none;
+  user-select: none;
+}
+
+
+
 

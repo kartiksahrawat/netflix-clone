@@ -38,8 +38,87 @@
                     </svg>
                 </button>
             </form>
-        </div>
-    </header>
+        </div> <!-- ye wala div tag hero-content ka closing tag hai -->
+    </header> <!-- ye wala div tag header ka closing tag hai -->
+
+    <!-- Curved Glowing Horizon Divider -->
+    <div class="curve-container">
+        <div class="curve-arc"></div>
+    </div>
+
+    <!-- Trending Now Section -->
+<section class="trending-section">
+  <h2>Trending Now</h2>
+
+  <div class="carousel-wrapper">
+    <!-- Left Button -->
+    <button class="carousel-btn prev-btn" id="prevBtn">&#10094;</button>
+
+    <!-- Cards Container -->
+    <div class="cards-track" id="cardsTrack">
+      <div class="card">
+        <img src="./Assets/1dhamal.png" alt="Dhamaal 4" />
+        <span class="card-num">1</span>
+      </div>
+      <div class="card">
+        <img src="./Assets/2alpha.png" alt="Alpha" />
+        <span class="card-num">2</span>
+      </div>
+      <div class="card">
+        <img src="./Assets/3sagar.png" alt="Safed Sagar" />
+        <span class="card-num">3</span>
+      </div>
+      <div class="card">
+        <img src="./Assets/4gand.png" alt="Andhari" />
+        <span class="card-num">4</span>
+      </div>
+      <div class="card">
+        <img src="./Assets/5cock.png" alt="Cocktail 2" />
+        <span class="card-num">5</span>
+      </div>
+      <div class="card">
+        <img src="./Assets/6kusti.png" alt="Show 6" />
+        <span class="card-num">6</span>
+      </div>
+      <div class="card">
+        <img src="./Assets/7cafe.png" alt="Show 7" />
+        <span class="card-num">7</span>
+      </div>
+      <div class="card">
+        <img src="./Assets/8korean.png" alt="Show 8" />
+        <span class="card-num">8</span>
+      </div>
+      <div class="card">
+        <img src="./Assets/9peedi.png" alt="Show 9" />
+        <span class="card-num">9</span>
+      </div>
+      <div class="card">
+        <img src="./Assets/10sex.png" alt="Show 10" />
+        <span class="card-num">10</span>
+      </div>
+    </div>  <!-- ye cards-track ka closing div tag -->
+
+    <!-- Right Button -->
+    <button class="carousel-btn next-btn" id="nextBtn">&#10095;</button>
+  </div> <!-- ye carousel-wrapper ka closing div tag -->
+
+  <script>
+    const track = document.getElementById("cardsTrack");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    // Ek click me kitna slide hona chahiye (card width + gap)
+    const scrollAmount = 600;
+
+    nextBtn.addEventListener("click", () => {
+        track.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+
+    prevBtn.addEventListener("click", () => {
+        track.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
+</script>
+</section>  <!--trending section ka closing tag-->
 </body>
 </html>
 
