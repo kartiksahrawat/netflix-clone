@@ -1,0 +1,145 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+
+ header {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 40%,
+      rgba(0, 0, 0, 0.9) 100%
+    ),
+    url('./Assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar{
+    display: flex;
+    max-width: 1200px; /*why*/
+    width: 85%;
+    margin: 0 auto; /*isko smjha*/
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    align-items: center;
+    padding-top: 20px;
+ }
+
+ .btns{
+   display: flex;
+   gap: 20px;
+ }
+
+ .lan-btn {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: 1px solid #777;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.sign-btn {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  padding: 7px 17px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.sign-btn:hover {
+  background-color: #c11119;
+}
+
+/* Hero Container */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  margin: auto; /* Screen ke bache hue area me exactly center karega */
+  text-align: center;
+  color: #ffffff;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero-content .subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.hero-content .cta-text {
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.email-form {
+  display: flex;
+  /* justify-content: center; */ 
+  /* align-items: center; */
+  gap: 8px;
+  /* width: 100%; */
+  /*mai justify align and width ko comment bhi kr rha toh koi frk nhi aarha*/
+}
+
+.email-form input {
+  flex: 1; /*ye smjh nhi aaya*/
+  padding: 16px;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: rgba(16, 16, 16, 0.7);
+  border: 1px solid rgba(128, 128, 128, 0.7);
+  border-radius: 4px;
+  outline: none;
+}
+
+.email-form input:focus {
+  border-color: #ffffff;
+}
+
+.email-form button {
+  display: inline-flex; /*isko if mai only flex kru toh*/
+  align-items: center;
+  /* justify-content: center; *//*mai justify ko comment bhi kr rha toh koi frk nhi aarha*/
+  padding: 12px 24px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #e50914;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap; /*smjh nhi aaya*/
+  transition: background-color 0.2s ease;
+}
+
+.email-form button:hover {
+  background-color: #c11119;
+}
+
